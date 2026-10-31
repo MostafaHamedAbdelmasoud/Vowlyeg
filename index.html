@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vowly — دعوات أفراح رقمية | Digital Wedding Invitations</title>
+<meta name="description" content="Vowly — دعوات أفراح رقمية أنيقة تُرسل على واتساب. Elegant digital wedding invitations sent over WhatsApp." />
+<meta property="og:title" content="Vowly — Digital Wedding Invitations" />
+<meta property="og:description" content="Elegant digital wedding invitations sent over WhatsApp." />
+<meta property="og:image" content="logo.jpg" />
+<link rel="icon" href="logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#5B3836;
+    --bg-deep:#3F2624;
+    --bg-soft:#6E4744;
+    --gold:#CBA87F;
+    --gold-bright:#E0C49B;
+    --cream:#F5ECE2;
+    --cream-dim:rgba(245,236,226,.72);
+    --line:rgba(203,168,127,.28);
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'El Messiri',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--cream);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* English typography */
+  html[lang="en"] body{font-family:'Poppins',system-ui,sans-serif;line-height:1.75}
+  .serif{font-family:'Playfair Display',serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* ===== Nav ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(10px);
+    background:rgba(63,38,36,.55);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand .rings{width:40px;height:30px}
+  .brand .name{font-family:'Playfair Display',serif;font-size:1.4rem;letter-spacing:.06em;color:var(--cream)}
+  .rings{display:block}
+  .rings .band{fill:none;stroke:var(--gold);stroke-width:5}
+  .rings .spark{fill:var(--gold-bright)}
+  .nav-right{display:flex;align-items:center;gap:22px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:1rem;color:var(--cream-dim);transition:color .2s}
+  .nav-links a:hover{color:var(--gold-bright)}
+  .nav-cta{
+    padding:9px 20px;border-radius:999px;
+    background:var(--gold);color:var(--bg-deep)!important;
+    font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(203,168,127,.3)}
+  .lang-btn{
+    background:none;border:1px solid var(--line);color:var(--cream);
+    border-radius:999px;padding:7px 15px;font:inherit;font-size:.9rem;font-weight:600;
+    cursor:pointer;transition:all .2s;white-space:nowrap;
+  }
+  .lang-btn:hover{border-color:var(--gold);color:var(--gold-bright)}
+  .burger{display:none;background:none;border:0;color:var(--cream);font-size:1.6rem;cursor:pointer}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;text-align:center;padding:90px 24px 100px;
+    background:
+      radial-gradient(1200px 500px at 70% -10%, var(--bg-soft), transparent 60%),
+      radial-gradient(900px 500px at 10% 110%, #4a2d2b, transparent 60%);
+  }
+  .hero .rings-big{width:130px;height:98px;margin:0 auto 22px;animation:rise .9s ease both}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,7vw,4.6rem);letter-spacing:.04em;line-height:1.1;margin-bottom:10px;animation:rise .9s .1s ease both}
+  .hero .sub{color:var(--gold-bright);letter-spacing:.42em;text-transform:uppercase;font-family:'Playfair Display',serif;font-size:.8rem;margin-bottom:26px;animation:rise .9s .15s ease both}
+  .hero p.lead{max-width:640px;margin:0 auto 38px;color:var(--cream-dim);font-size:clamp(1.05rem,2.4vw,1.3rem);animation:rise .9s .2s ease both}
+  .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:rise .9s .25s ease both}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:1.05rem;transition:transform .2s,box-shadow .2s}
+  .btn-primary{background:var(--gold);color:var(--bg-deep)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(203,168,127,.35)}
+  .btn-ghost{border:1px solid var(--line);color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--gold);background:rgba(203,168,127,.08)}
+  .btn svg{width:20px;height:20px;fill:currentColor}
+  .divider{height:1px;max-width:120px;margin:70px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+
+  /* ===== Sections ===== */
+  section{padding:80px 0}
+  .sec-head{text-align:center;margin-bottom:54px}
+  .sec-head .kick{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;font-family:'Playfair Display',serif}
+  .sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,2.8rem);margin-top:8px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:linear-gradient(180deg,var(--bg-soft),rgba(110,71,68,.35));border:1px solid var(--line);border-radius:18px;padding:34px 26px;text-align:center;transition:transform .25s,border-color .25s}
+  .card:hover{transform:translateY(-6px);border-color:var(--gold)}
+  .card .ic{width:62px;height:62px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(203,168,127,.12);border:1px solid var(--line)}
+  .card .ic svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.6}
+  .card h3{font-size:1.3rem;margin-bottom:10px;color:var(--cream)}
+  .card p{color:var(--cream-dim);font-size:1rem}
+
+  /* ===== Steps ===== */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{position:relative;padding:34px 26px;border-radius:18px;background:rgba(63,38,36,.4);border:1px solid var(--line)}
+  .step .num{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--gold);opacity:.9;line-height:1;margin-bottom:14px}
+  .step h3{font-size:1.25rem;margin-bottom:8px}
+  .step p{color:var(--cream-dim);font-size:.98rem}
+
+  /* ===== CTA band ===== */
+  .cta-band{text-align:center;margin:30px auto;max-width:900px;background:linear-gradient(135deg,var(--bg-soft),#4a2d2b);border:1px solid var(--line);border-radius:26px;padding:56px 30px}
+  .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
+  .cta-band p{color:var(--cream-dim);margin-bottom:30px;font-size:1.1rem}
+
+  /* ===== Footer ===== */
+  footer{border-top:1px solid var(--line);padding:46px 0 36px;background:var(--bg-deep)}
+  .foot{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+  .foot .brand .name{font-size:1.5rem}
+  .socials{display:flex;gap:16px}
+  .socials a{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);color:var(--cream);transition:all .2s}
+  .socials a:hover{background:var(--gold);color:var(--bg-deep);transform:translateY(-2px)}
+  .socials svg{width:22px;height:22px;fill:currentColor}
+  .copy{color:var(--cream-dim);font-size:.9rem}
+
+  .fab{position:fixed;bottom:22px;inset-inline-start:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.35);transition:transform .2s}
+  .fab:hover{transform:scale(1.08)}
+  .fab svg{width:30px;height:30px;fill:#fff}
+
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+  @media(max-width:860px){
+    .grid,.steps{grid-template-columns:1fr}
+    .nav-links{position:absolute;top:68px;inset-inline:0;flex-direction:column;gap:0;background:rgba(63,38,36,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 0;display:none}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:14px 24px;width:100%}
+    .nav-cta{margin:10px 24px;text-align:center}
+    .burger{display:block}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav">
+    <a class="brand" href="#top">
+      <svg class="rings" viewBox="0 0 100 74" aria-hidden="true"><path class="spark" d="M50 2l5 7-5 7-5-7z"/><circle class="band" cx="40" cy="46" r="22"/><circle class="band" cx="60" cy="46" r="22"/></svg>
+      <span class="name">Vowly</span>
+    </a>
+    <div class="nav-right">
+      <div class="nav-links" id="nav">
+        <a href="#features" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+        <a href="#how" data-ar="إزاي بيشتغل" data-en="How it works">إزاي بيشتغل</a>
+        <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+        <a class="nav-cta" href="https://wa.me/201043237379" target="_blank" rel="noopener" data-ar="احجز دعوتك" data-en="Book now">احجز دعوتك</a>
+      </div>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <button class="burger" aria-label="menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="rings rings-big" viewBox="0 0 100 74" aria-label="Vowly"><path class="spark" d="M50 2l5 7-5 7-5-7z"/><circle class="band" cx="40" cy="46" r="22"/><circle class="band" cx="60" cy="46" r="22"/></svg>
+    <div class="sub">Digital Invitations</div>
+    <h1 class="serif" data-ar="دعوة فرحك… بلمسة أنيقة" data-en="Your invitation, beautifully done">دعوة فرحك… بلمسة أنيقة</h1>
+    <p class="lead"
+       data-ar="في Vowly بنصمّم دعوات أفراح رقمية راقية، تبعتها لضيوفك على واتساب في ثواني، وتتابع ردودهم من مكان واحد — من غير ورق ولا تعب."
+       data-en="At Vowly we craft elegant digital wedding invitations — send them to your guests on WhatsApp in seconds and track every reply in one place, no paper, no hassle.">في Vowly بنصمّم دعوات أفراح رقمية راقية، تبعتها لضيوفك على واتساب في ثواني، وتتابع ردودهم من مكان واحد — من غير ورق ولا تعب.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="https://wa.me/201043237379" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.496.099-.198.05-.372-.025-.521-.074-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span data-ar="تواصل على واتساب" data-en="Chat on WhatsApp">تواصل على واتساب</span>
+      </a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/vowlyeg/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 100 13.4 6.7 6.7 0 000-13.4zm0 11.05a4.35 4.35 0 110-8.7 4.35 4.35 0 010 8.7zm6.95-11.3a1.56 1.56 0 11-3.12 0 1.56 1.56 0 013.12 0z"/></svg>
+        <span data-ar="تابعنا على إنستجرام" data-en="Follow on Instagram">تابعنا على إنستجرام</span>
+      </a>
+    </div>
+    <div class="divider"></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kick" data-ar="ليه Vowly" data-en="Why Vowly">ليه Vowly</div>
+        <h2 class="serif" data-ar="دعوات تليق بأحلى يوم" data-en="Invitations worthy of your big day">دعوات تليق بأحلى يوم</h2>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 16.5 7.1 18.2l.9-5.5-4-3.9L9.5 8z"/></svg></div>
+          <h3 data-ar="تصميم أنيق" data-en="Elegant design">تصميم أنيق</h3>
+          <p data-ar="قوالب دعوات راقية ومتنوعة، بتتفصّل على ذوقك وألوان فرحك." data-en="Refined, varied invitation templates tailored to your style and wedding colors.">قوالب دعوات راقية ومتنوعة، بتتفصّل على ذوقك وألوان فرحك.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1121 11.5z"/></svg></div>
+          <h3 data-ar="إرسال على واتساب" data-en="Sent via WhatsApp">إرسال على واتساب</h3>
+          <p data-ar="ابعت الدعوة لكل ضيوفك على واتساب بضغطة واحدة، توصل في ثواني." data-en="Send the invitation to all your guests on WhatsApp with one click — delivered in seconds.">ابعت الدعوة لكل ضيوفك على واتساب بضغطة واحدة، توصل في ثواني.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.8 21h8.4a2 2 0 002-2V5a2 2 0 00-2-2H7.8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
+          <h3 data-ar="تأكيد الحضور" data-en="RSVP tracking">تأكيد الحضور</h3>
+          <p data-ar="ضيوفك بيأكدوا حضورهم من الدعوة، وانت بتتابع الردود أول بأول." data-en="Guests confirm their attendance right from the invitation, and you follow every reply in real time.">ضيوفك بيأكدوا حضورهم من الدعوة، وانت بتتابع الردود أول بأول.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" style="background:rgba(63,38,36,.35)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kick" data-ar="بكل بساطة" data-en="Simple as that">بكل بساطة</div>
+        <h2 class="serif" data-ar="إزاي بيشتغل" data-en="How it works">إزاي بيشتغل</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num serif" data-ar="١" data-en="1">١</div>
+          <h3 data-ar="اختار تصميمك" data-en="Pick your design">اختار تصميمك</h3>
+          <p data-ar="اختار من القوالب أو قوللنا فكرتك، وإحنا نظبّطها بأسماءكم وتفاصيل الفرح." data-en="Choose a template or share your idea, and we tailor it with your names and wedding details.">اختار من القوالب أو قوللنا فكرتك، وإحنا نظبّطها بأسماءكم وتفاصيل الفرح.</p>
+        </div>
+        <div class="step">
+          <div class="num serif" data-ar="٢" data-en="2">٢</div>
+          <h3 data-ar="ابعت لضيوفك" data-en="Send to guests">ابعت لضيوفك</h3>
+          <p data-ar="نرسل الدعوة لقائمة ضيوفك على واتساب بشكل رسمي ومرتّب." data-en="We send the invitation to your guest list on WhatsApp — neat and professional.">نرسل الدعوة لقائمة ضيوفك على واتساب بشكل رسمي ومرتّب.</p>
+        </div>
+        <div class="step">
+          <div class="num serif" data-ar="٣" data-en="3">٣</div>
+          <h3 data-ar="تابع الردود" data-en="Track replies">تابع الردود</h3>
+          <p data-ar="تعرف مين هيحضر ومين اعتذر، وتنظّم عددكم من غير لخبطة." data-en="See who's coming and who can't, and plan your numbers with zero confusion.">تعرف مين هيحضر ومين اعتذر، وتنظّم عددكم من غير لخبطة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 class="serif" data-ar="جاهز تبدأ دعوة فرحك؟" data-en="Ready to start your invitation?">جاهز تبدأ دعوة فرحك؟</h2>
+        <p data-ar="كلّمنا دلوقتي على واتساب ونبدأ نجهّز دعوتكم." data-en="Message us now on WhatsApp and we'll start preparing your invitation.">كلّمنا دلوقتي على واتساب ونبدأ نجهّز دعوتكم.</p>
+        <a class="btn btn-primary" href="https://wa.me/201043237379" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.496.099-.198.05-.372-.025-.521-.074-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span dir="ltr">+20 104 323 7379</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">
+      <svg class="rings" viewBox="0 0 100 74" style="width:48px;height:36px" aria-hidden="true"><path class="spark" d="M50 2l5 7-5 7-5-7z"/><circle class="band" cx="40" cy="46" r="22"/><circle class="band" cx="60" cy="46" r="22"/></svg>
+      <span class="name serif">Vowly</span>
+    </a>
+    <div class="socials">
+      <a href="https://wa.me/201043237379" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.496.099-.198.05-.372-.025-.521-.074-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/vowlyeg/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 100 13.4 6.7 6.7 0 000-13.4zm0 11.05a4.35 4.35 0 110-8.7 4.35 4.35 0 010 8.7zm6.95-11.3a1.56 1.56 0 11-3.12 0 1.56 1.56 0 013.12 0z"/></svg>
+      </a>
+    </div>
+    <div class="copy"><span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">© <span id="yr"></span> Vowly — جميع الحقوق محفوظة</span></div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/201043237379" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.26l-.999 3.648 3.969-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.496.099-.198.05-.372-.025-.521-.074-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script>
+  (function(){
+    var yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
+  })();
+
+  function applyLang(lang){
+    var isEn = lang==='en';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isEn ? 'ltr' : 'rtl';
+    document.querySelectorAll('[data-ar]').forEach(function(el){
+      var val = isEn ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+      if(val!==null) el.textContent = val;
+    });
+    // footer copyright keeps the year span
+    var copy=document.querySelector('.copy span[data-ar]');
+    if(copy){
+      copy.innerHTML = isEn
+        ? '© <span id="yr"></span> Vowly — All rights reserved'
+        : '© <span id="yr"></span> Vowly — جميع الحقوق محفوظة';
+      var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+    }
+    var btn=document.getElementById('langBtn');
+    if(btn) btn.textContent = isEn ? 'ع' : 'EN';
+    try{ localStorage.setItem('vowly_lang', lang); }catch(e){}
+  }
+
+  function toggleLang(){
+    var cur = document.documentElement.lang==='en' ? 'en' : 'ar';
+    applyLang(cur==='en' ? 'ar' : 'en');
+    var nav=document.getElementById('nav'); if(nav) nav.classList.remove('open');
+  }
+
+  // init from saved choice
+  (function(){
+    var saved='ar';
+    try{ saved = localStorage.getItem('vowly_lang') || 'ar'; }catch(e){}
+    if(saved==='en') applyLang('en');
+  })();
+
+  document.querySelectorAll('#nav a').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});
+  });
+</script>
+</body>
+</html>
